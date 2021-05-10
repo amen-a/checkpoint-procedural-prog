@@ -1,0 +1,65 @@
+FUNCTION dot (x1,x2 :ARRAY_OF integer) : integer
+VAR
+        s:=0;
+BEGIN
+    s:= x1[0]*x2[0]+x1[2]*x2[2]+x1[4]*x2[4] // if victors looked like this   A = 3 * i + 5 * j + 4 * k    B = 2 * i + 7 * j + 5 * k  i didn't really understant this..
+    RETURN s ;
+END
+
+
+PROCEDURE dot_product (v1,v2: ARRAY_OF integer )
+VAR
+
+
+
+
+BEGIN
+    ps := dot (v1,v2);
+
+
+
+END
+
+
+
+ALGORITHM Dot product
+VAR
+    t: ARRAY_OF integer;
+    n:integer;
+    i:=0;
+BEGIN
+    read(n);
+    FOR i FROM 0 TO n-1   DO
+        dot_product( t+n+0 ,t+n+1 ) // this is supposed to be applyed on each vector pair from 0 to n
+        IF (ps = 0) THEN
+            write("the"n,"th pair are orthogonal");
+        END_IF
+    END_FOR
+
+
+
+
+END
+
+
+
+
+
+ALGORITHM Dot product
+VAR
+    t: ARRAY_OF integer;
+    n:integer;
+    i:=0;
+BEGIN
+    read(n);
+    FOR i FROM 0 TO n-1   DO
+    IF (dot_product(t+n+0,t+n+1) = 0) THEN
+        write("the"n,"th pair are orthogonal");
+    END_IF
+        
+    END_FOR
+
+
+
+
+END
